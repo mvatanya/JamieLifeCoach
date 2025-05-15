@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
         <span className="text-2xl font-bold">{price}</span>
       </div>
 
-      <p className="text-gray-700 mb-6">{description}</p>
+      <p className="text-gray-700 mb-6 text-lg">{description}</p>
 
       {features.length > 0 && (
         <ul className="space-y-3 mb-8">
@@ -53,7 +53,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
                 size={18}
                 className="text-[#FFB5C2] mr-2 mt-1 flex-shrink-0"
               />
-              <span className="text-gray-700">{feature}</span>
+              <span className="text-gray-700 text-lg">{feature}</span>
             </li>
           ))}
         </ul>
@@ -77,10 +77,10 @@ const ServicesSection: React.FC = () => {
     <section id="services" className="section bg-white">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#fe4955]">
             My Services
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg md:text-xl text-gray-700">
             I offer personalized coaching packages designed to meet you where
             you are and guide you to where you want to be.
           </p>
