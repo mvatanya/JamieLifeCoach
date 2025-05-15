@@ -77,7 +77,7 @@ const ServicesSection: React.FC = () => {
     <section id="services" className="section bg-white">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#fe4955]">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 uppercase">
             My Services
           </h2>
           <p className="text-lg md:text-xl text-gray-700">

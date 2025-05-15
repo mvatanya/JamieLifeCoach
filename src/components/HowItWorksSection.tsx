@@ -55,7 +55,7 @@ const HowItWorksSection: React.FC = () => {
     <section id="how-it-works" className="section bg-primaryLight">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#fe4955]">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 uppercase">
             How It Works
           </h2>
           <p className="text-lg md:text-xl text-gray-700">
