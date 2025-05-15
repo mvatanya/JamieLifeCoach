@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
@@ -8,13 +8,13 @@ const AboutSection: React.FC = () => {
           <div className="order-2 md:order-1 animate-fade-in">
             <div className="relative">
               <div className="absolute inset-0 bg-[#FFA07A] transform rotate-3 opacity-20"></div>
-              <img 
-                src="https://i.postimg.cc/QMjn844d/jamie-image.jpg" 
-                alt="Life Coach Portrait" 
+              <img
+                src="https://i.postimg.cc/QMjn844d/jamie-image.jpg"
+                alt="Life Coach Portrait"
                 className="shadow-soft relative z-10 w-full h-auto object-cover"
               />
-              <div className="absolute -bottom-4 -right-4 bg-yellowPastel p-6 shadow-soft z-20">
-                <p className="font-medium">10+ Years Experience</p>
+              <div className="absolute -bottom-4 -right-4 bg-button p-6 shadow-soft z-20">
+                <p className="font-medium text-white">10+ Years Experience</p>
               </div>
             </div>
           </div>
@@ -24,15 +24,14 @@ const AboutSection: React.FC = () => {
             </h2>
             <p className="text-gray-700 mb-6 leading-relaxed">
               Hi, I'm Jamie Miller. I'm a certified life coach passionate about
-helping people create clarity, build confidence, and take purposeful
-steps toward the life they truly want. 
+              helping people create clarity, build confidence, and take
+              purposeful steps toward the life they truly want.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              I specialize in guiding
-individuals through personal and professional transitions, helping
-them move from feeling stuck to feeling empowered. Whether you're
-navigating change or chasing big goals, I'm here to support you every
-step of the way.
+              I specialize in guiding individuals through personal and
+              professional transitions, helping them move from feeling stuck to
+              feeling empowered. Whether you're navigating change or chasing big
+              goals, I'm here to support you every step of the way.
             </p>
           </div>
         </div>
