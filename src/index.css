@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lufga';
+  src: url('/fonts/Lufga-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Lufga', sans-serif;
+  @apply bg-primaryBg text-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lufga', sans-serif;
+  @apply font-medium;
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.btn {
+  @apply px-6 py-3 font-medium transition-all duration-300 inline-flex items-center justify-center;
+}
+
+.btn-primary {
+  @apply bg-[#fe4955] text-white hover:bg-opacity-90;
+}
+
+.btn-outline {
+  @apply border-2 border-[#fe4955] text-[#fe4955] hover:bg-[#fe4955] hover:text-white;
+}
+
+.service-card {
+  @apply bg-white p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-100;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
