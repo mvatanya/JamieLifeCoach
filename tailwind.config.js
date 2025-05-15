@@ -6,7 +6,7 @@ export default {
       colors: {
         primaryBg: "#f4ece8",
         primaryDark: "#d4c6c0",
-        primaryLight: "#faf6f4",
+        primaryLight: "#faf4f1",
         secondary: "#dde8e8",
         secondaryDark: "#b8c7c7",
         secondaryLight: "#f0f5f5",
@@ -16,8 +16,7 @@ export default {
         yellowButton: "#ffd500",
         text: {
           primary: "#8a7b75",
-          secondary: "#5f6e6e",
-          light: "#b3a49d",
+          secondary: "#447e7e",
         },
       },
       fontFamily: {
