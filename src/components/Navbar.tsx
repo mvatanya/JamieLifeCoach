@@ -38,12 +38,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <motion.a
-          href="#home"
-          className="flex items-center"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <motion.a href="#home" className="flex items-center">
           <img
             src="https://i.postimg.cc/vTZrHvBR/Chat-GPT-Image-May-15-2025-05-06-58-PM.png"
             alt="Serene Life Coaching Logo"

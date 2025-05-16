@@ -104,7 +104,7 @@ h6 {
 }
 
 .logo {
-  @apply w-auto h-12 md:h-16;
+  @apply w-auto h-[4.5rem] md:h-24;
 }
 
 .process-card {
