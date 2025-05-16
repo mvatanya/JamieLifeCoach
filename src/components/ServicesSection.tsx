@@ -1,5 +1,6 @@
 import React from "react";
 import { Clock, Calendar, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 type ServiceProps = {
   title: string;
@@ -21,14 +22,21 @@ const ServiceCard: React.FC<ServiceProps> = ({
   delay,
 }) => {
   return (
-    <div
-      className={`service-card animate-fade-in ${
+    <motion.div
+      className={`service-card rounded-2xl ${
         isPopular ? "border-[#FFB5C2] border-2" : ""
       }`}
-      style={{ transitionDelay: delay }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: Number(delay) * 0.2 }}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.3 },
+      }}
     >
       {isPopular && (
-        <div className="bg-yellowButton text-white px-4 py-1 inline-block mb-4">
+        <div className="bg-yellowButton text-white px-4 py-1 inline-block mb-4 rounded-lg">
           Most Popular
         </div>
       )}
@@ -43,7 +51,9 @@ const ServiceCard: React.FC<ServiceProps> = ({
         <span className="text-2xl font-bold">{price}</span>
       </div>
 
-      <p className="text-gray-700 mb-6 text-lg">{description}</p>
+      <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+        {description}
+      </p>
 
       {features.length > 0 && (
         <ul className="space-y-3 mb-8">
@@ -59,16 +69,18 @@ const ServiceCard: React.FC<ServiceProps> = ({
         </ul>
       )}
 
-      <a
+      <motion.a
         href="https://calendly.com"
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-primary w-full flex items-center justify-center"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
       >
         <Calendar size={18} className="mr-2" />
         Book Now
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 };
 
@@ -97,7 +109,7 @@ const ServicesSection: React.FC = () => {
               "Determine if we're a good fit",
               "Get clarity on next steps",
             ]}
-            delay="0s"
+            delay="0"
           />
 
           <ServiceCard
@@ -112,7 +124,7 @@ const ServicesSection: React.FC = () => {
               "Follow-up resources",
             ]}
             isPopular={true}
-            delay="0.1s"
+            delay="0.1"
           />
 
           <ServiceCard
@@ -127,7 +139,7 @@ const ServicesSection: React.FC = () => {
               "Email support between sessions",
               "Custom resources and exercises",
             ]}
-            delay="0.2s"
+            delay="0.2"
           />
         </div>
       </div>

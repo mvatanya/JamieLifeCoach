@@ -1,13 +1,12 @@
 import React from "react";
-import { Heart, Compass, MessageSquare, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ProcessCard: React.FC<{
-  icon: React.ReactNode;
+  number: number;
   title: string;
   description: string;
   delay: number;
-}> = ({ icon, title, description, delay }) => {
+}> = ({ number, title, description, delay }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -15,24 +14,18 @@ const ProcessCard: React.FC<{
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: delay * 0.2 }}
       whileHover={{
-        scale: 1.05,
         rotate: [0, -2, 2, -2, 0],
         transition: { duration: 0.3 },
       }}
-      className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-hover transition-all duration-300 min-h-[320px] flex flex-col process-card"
+      className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-hover transition-all duration-300 min-h-[320px] flex flex-col relative overflow-hidden"
     >
-      <motion.div
-        className="flex items-center justify-center mb-6"
-        whileHover={{
-          scale: 1.2,
-          rotate: 360,
-          transition: { duration: 0.5 },
-        }}
-      >
-        {icon}
+      <motion.div className="flex items-center justify-center mb-6 relative">
+        <span className="outlined-number">{number}</span>
       </motion.div>
       <h3 className="text-xl font-semibold mb-6 text-center">{title}</h3>
-      <p className="text-gray-700 text-lg flex-grow">{description}</p>
+      <p className="text-gray-700 text-lg flex-grow leading-relaxed">
+        {description}
+      </p>
     </motion.div>
   );
 };
@@ -40,25 +33,21 @@ const ProcessCard: React.FC<{
 const HowItWorksSection: React.FC = () => {
   const steps = [
     {
-      icon: <Compass size={40} className="text-button" />,
       title: "Discovery",
       description:
         "We begin with understanding your current situation, challenges, and what you hope to achieve through coaching.",
     },
     {
-      icon: <Heart size={40} className="text-button" />,
       title: "Connection",
       description:
         "Building trust and rapport is essential. We create a safe space for open and honest exploration.",
     },
     {
-      icon: <MessageSquare size={40} className="text-button" />,
       title: "Transformation",
       description:
         "Through regular sessions, we work on breaking patterns, building new skills, and creating lasting change.",
     },
     {
-      icon: <Award size={40} className="text-button" />,
       title: "Growth",
       description:
         "As you implement new strategies, you'll experience growth, increased confidence, and lasting transformation.",
@@ -87,7 +76,7 @@ const HowItWorksSection: React.FC = () => {
           {steps.map((step, index) => (
             <ProcessCard
               key={index}
-              icon={step.icon}
+              number={index + 1}
               title={step.title}
               description={step.description}
               delay={index}
