@@ -3,36 +3,41 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Lufga';
-  src: url('/fonts/Lufga-Regular.woff2') format('woff2');
+  font-family: "Lufga";
+  src: url("/fonts/Lufga-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Lufga';
-  src: url('/fonts/Lufga-Medium.woff2') format('woff2');
+  font-family: "Lufga";
+  src: url("/fonts/Lufga-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Lufga';
-  src: url('/fonts/Lufga-Bold.woff2') format('woff2');
+  font-family: "Lufga";
+  src: url("/fonts/Lufga-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'Lufga', sans-serif;
+  font-family: "Lufga", sans-serif;
   @apply bg-primaryBg text-gray-800;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lufga', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lufga", sans-serif;
   @apply font-medium;
 }
 
@@ -45,15 +50,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-  @apply px-6 py-3 font-medium transition-all duration-300 inline-flex items-center justify-center;
+  @apply px-6 py-3 font-medium transition-all duration-300 inline-flex items-center justify-center rounded-lg;
 }
 
 .btn-primary {
-  @apply bg-[#fe4955] text-white hover:bg-opacity-90;
+  @apply bg-[#fe4955] text-white hover:bg-[#ff7c84] transform hover:scale-105 hover:shadow-lg transition-all duration-300;
 }
 
 .btn-outline {
-  @apply border-2 border-[#fe4955] text-[#fe4955] hover:bg-[#fe4955] hover:text-white;
+  @apply border-2 border-[#fe4955] text-[#fe4955] hover:bg-[#ff7c84] hover:border-[#ff7c84] hover:text-white transform hover:scale-105 hover:shadow-lg transition-all duration-300;
 }
 
 .service-card {
@@ -69,4 +74,39 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fade-in.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Mobile background styles */
+@media (max-width: 768px) {
+  #quote-section {
+    background-image: url("https://images.pexels.com/photos/2058498/pexels-photo-2058498.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  #quote-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.95)
+    );
+    z-index: 1;
+  }
+
+  #quote-section > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.logo {
+  @apply w-auto h-12 md:h-16;
+}
+
+.process-card {
+  @apply transform hover:scale-105 hover:shadow-xl transition-all duration-300;
 }

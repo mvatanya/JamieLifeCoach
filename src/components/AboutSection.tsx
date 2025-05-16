@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const AboutSection: React.FC = () => {
   return (
@@ -6,7 +7,14 @@ const AboutSection: React.FC = () => {
       <div className="container py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 animate-fade-in">
-            <div className="relative">
+            <motion.div
+              className="relative"
+              whileHover={{
+                scale: 1.02,
+                rotate: 2,
+                transition: { duration: 0.3 },
+              }}
+            >
               <div className="absolute inset-0 bg-[#FFA07A] transform rotate-3 opacity-20"></div>
               <img
                 src="https://i.postimg.cc/QMjn844d/jamie-image.jpg"
@@ -16,7 +24,7 @@ const AboutSection: React.FC = () => {
               <div className="absolute -bottom-4 -right-4 bg-button p-6 shadow-soft z-20">
                 <p className="font-medium text-white">10+ Years Experience</p>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="order-1 md:order-2 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 uppercase">
