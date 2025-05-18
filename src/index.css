@@ -44,7 +44,7 @@ body {
 
 body {
   font-family: "Lufga", sans-serif;
-  @apply bg-primaryBg text-gray-800;
+  /* @apply bg-primaryBg text-gray-800; */
 }
 
 h1,
