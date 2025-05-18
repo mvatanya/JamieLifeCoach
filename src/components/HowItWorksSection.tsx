@@ -59,7 +59,7 @@ const HowItWorksSection: React.FC = () => {
     {
       title: "Strategy & Action Planning",
       description:
-        "With your goals in place, we develop a strategic blueprint that is unique to you.. I support you in identifying next steps, breaking down obstacles, and building habits that support your growth. This is where insight meets practical strategy.",
+        "With your goals in place, we develop a strategic blueprint that is unique to you. I support you in identifying next steps, breaking down obstacles, and building habits that support your growth. This is where insight meets practical strategy.",
       bgImage:
         "https://i.postimg.cc/JhsrGR7T/Chat-GPT-Image-May-17-2025-10-31-14-PM.png",
     },

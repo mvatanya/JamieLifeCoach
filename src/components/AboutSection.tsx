@@ -47,8 +47,8 @@ const AboutSection: React.FC = () => {
               transition={{ duration: 0.8 }}
             />
             <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
-              Hi, I'm Jamie Miller. I'm a certified life coach passionate about
-              Zlping people create clarity, build confidence, and take
+              Hi, I’m Jamie Miller. I'm a certified life coach passionate about
+              helping people create clarity, build confidence, and take
               purposeful steps toward the life they truly want.
             </p>
             <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
