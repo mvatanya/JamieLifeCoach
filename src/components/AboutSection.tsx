@@ -5,7 +5,7 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center bg-gradient-to-br from-white to-[#fff5f5]"
+      className="flex items-center bg-gradient-to-br from-white to-[#fff5f5]"
     >
       <div className="container py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -40,9 +40,15 @@ const AboutSection: React.FC = () => {
                 About Me
               </h2>
             </div>
+            <motion.div
+              className="w-32 h-1 bg-[#FFB5C2]"
+              initial={{ width: 0 }}
+              whileInView={{ width: 128 }}
+              transition={{ duration: 0.8 }}
+            />
             <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
               Hi, I'm Jamie Miller. I'm a certified life coach passionate about
-              helping people create clarity, build confidence, and take
+              Zlping people create clarity, build confidence, and take
               purposeful steps toward the life they truly want.
             </p>
             <p className="text-gray-700 leading-relaxed text-lg md:text-xl">
@@ -51,12 +57,6 @@ const AboutSection: React.FC = () => {
               feeling empowered. Whether you're navigating change or chasing big
               goals, I'm here to support you every step of the way.
             </p>
-            <motion.div
-              className="w-32 h-1 bg-[#FFB5C2]"
-              initial={{ width: 0 }}
-              whileInView={{ width: 128 }}
-              transition={{ duration: 0.8 }}
-            />
           </div>
         </div>
       </div>

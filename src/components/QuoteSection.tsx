@@ -33,11 +33,10 @@ const QuoteSection: React.FC = () => {
           >
             <Quote size={48} className="text-[#FFB5C2] opacity-50 mb-6" />
             <h2 className="text-2xl md:text-3xl font-medium italic mb-6 text-gray-800">
-              "The journey of a thousand miles begins with a single step. Your
-              transformation starts now, with the courage to seek change and the
-              wisdom to accept guidance."
+              "We help people understand what they want, and why they want it,
+              and then assist them in creating an action plan to close the gap
+              from where they are to where they want to be."
             </h2>
-            <p className="text-xl font-semibold text-gray-800">— Lao Tzu</p>
           </motion.div>
         </div>
       </div>

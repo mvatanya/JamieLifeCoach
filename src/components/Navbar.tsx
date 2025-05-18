@@ -40,8 +40,8 @@ const Navbar: React.FC = () => {
       <div className="container flex items-center justify-between">
         <motion.a href="#home" className="flex items-center">
           <img
-            src="https://i.postimg.cc/vTZrHvBR/Chat-GPT-Image-May-15-2025-05-06-58-PM.png"
-            alt="Serene Life Coaching Logo"
+            src="https://i.postimg.cc/vH7cs8Df/May-17-2025-10-16-10-PM.png"
+            alt="Jamie Miller Coaching Logo"
             className="logo"
           />
         </motion.a>

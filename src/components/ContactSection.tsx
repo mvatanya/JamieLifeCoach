@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
                 <h3 className="text-xl font-semibold">Email</h3>
               </div>
               <p className="text-lg text-gray-700 ml-9">
-                hello@serenelifecoaching.com
+                hello@JamieMillercoaching.com
               </p>
             </div>
 

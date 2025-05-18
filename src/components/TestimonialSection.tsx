@@ -4,37 +4,21 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 type TestimonialProps = {
   quote: string;
   name: string;
-  title: string;
-  image: string;
+  date: string;
   stars: number;
 };
 
 const testimonials: TestimonialProps[] = [
   {
-    quote:
-      "Working with this coach transformed my approach to life's challenges. The personalized strategies and ongoing support helped me achieve balance I never thought possible.",
-    name: "Sarah Johnson",
-    title: "Marketing Director",
-    image:
-      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    quote: `Jamie is amazing... So non threatening & informative. I will truly love working with her. I look forward to exploring more ideas & sharing my experiences that give me clarity to grow. I would highly recommend her as a life coach!`,
+    name: "Linda S",
+    date: "April 25, 2023",
     stars: 5,
   },
   {
-    quote:
-      "After struggling with career decisions for years, the 90-day coaching program gave me clarity and confidence. I now have a roadmap for success that aligns with my true values.",
-    name: "Michael Thompson",
-    title: "Software Engineer",
-    image:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    stars: 5,
-  },
-  {
-    quote:
-      "The coaching sessions helped me break through limiting beliefs that were holding me back for years. I'm now pursuing goals I previously thought were impossible.",
-    name: "Emily Rodriguez",
-    title: "Small Business Owner",
-    image:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    quote: `I received an understanding of why I function the way I do. I learned strategies for supporting myself in my journey to experience the confidence needed to achieve my personal and professional goals.`,
+    name: "Rita S.",
+    date: "January 27, 2023",
     stars: 5,
   },
 ];
@@ -86,17 +70,12 @@ const TestimonialSection: React.FC = () => {
             </p>
 
             <div className="flex items-center">
-              <img
-                src={currentTestimonial.image}
-                alt={currentTestimonial.name}
-                className="w-16 h-16 rounded-full object-cover mr-4"
-              />
               <div>
                 <h4 className="font-semibold text-lg">
                   {currentTestimonial.name}
                 </h4>
                 <p className="text-gray-600 text-lg">
-                  {currentTestimonial.title}
+                  {currentTestimonial.date}
                 </p>
               </div>
             </div>
