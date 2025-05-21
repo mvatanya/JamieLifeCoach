@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,10 +19,40 @@ const ContactSection: React.FC = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const result = await emailjs.sendForm(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        formRef.current!,
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      );
+
+      if (result.text === "OK") {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message! I will get back to you soon.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Sorry, something went wrong. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -76,7 +114,19 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-soft">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {submitStatus.type && (
+              <div
+                className={`mb-6 p-4 rounded-lg ${
+                  submitStatus.type === "success"
+                    ? "bg-green-50 text-green-800"
+                    : "bg-red-50 text-red-800"
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -180,9 +230,16 @@ const ContactSection: React.FC = () => {
               <button
                 type="submit"
                 className="btn btn-primary w-full flex items-center justify-center"
+                disabled={isSubmitting}
               >
-                <Send size={18} className="mr-2" />
-                Send Message
+                {isSubmitting ? (
+                  <span>Sending...</span>
+                ) : (
+                  <>
+                    <Send size={18} className="mr-2" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
