@@ -95,7 +95,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
-                  <p className="text-gray-700">hello@jamiemillercoaching.com</p>
+                  <p className="text-gray-700">info@jamiemillercoaching.com</p>
                 </div>
               </div>
 

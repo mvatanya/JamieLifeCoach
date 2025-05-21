@@ -16,32 +16,6 @@ const Footer: React.FC = () => {
               Empowering individuals to transform their lives through
               personalized coaching and support.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -93,9 +67,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>San Francisco, CA</li>
-              <li>hello@JamieMillercoaching.com</li>
-              <li>(555) 123-4567</li>
+              <li>info@JamieMillercoaching.com</li>
             </ul>
           </div>
         </div>
