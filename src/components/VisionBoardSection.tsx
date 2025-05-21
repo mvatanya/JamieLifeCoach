@@ -12,7 +12,7 @@ const VisionBoardSection: React.FC = () => {
   ];
 
   return (
-    <section className="p-24 bg-secondary">
+    <section className="visionboard py-24 bg-secondary">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -28,14 +28,6 @@ const VisionBoardSection: React.FC = () => {
               alt="Vision Board Workshop"
               className="relative z-10 w-full h-[500px] object-contain rounded-2xl shadow-soft"
             />
-            <motion.div
-              className="absolute -bottom-4 -right-4 bg-[#fe4955] p-6 shadow-soft z-20 rounded-xl"
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <p className="font-medium text-white">Next Workshop: TBA</p>
-            </motion.div>
           </motion.div>
 
           <motion.div
@@ -55,11 +47,16 @@ const VisionBoardSection: React.FC = () => {
                 whileInView={{ width: 128 }}
                 transition={{ duration: 0.8 }}
               />
+              <h2 className="text-2xl md:text-3xl mb-6 italic">
+                Envision, Align, and Transform:
+              </h2>
               <p className="text-gray-700 leading-relaxed text-lg md:text-xl mb-8">
-                Join our transformative Vision Board Workshop where you'll learn
-                to visualize and manifest your dreams. This hands-on session
-                combines creative expression with strategic goal-setting
-                techniques.
+                Schedule a heart-centered Vision Board Workshop for friends
+                designed to help you play big and live a life you most desire.
+                This is more than a workshop, it is a fun and effective way to
+                gain clarity, set authentic intentions, and create a visual map
+                that reflects your soul’s true path. It’s more than just a
+                vision board — it’s a portal to the life you’re meant to live.
               </p>
             </div>
 
@@ -82,30 +79,15 @@ const VisionBoardSection: React.FC = () => {
               ))}
             </div>
 
-            <motion.div
-              className="bg-white p-8 rounded-xl shadow-soft space-y-4"
+            <motion.a
+              href="#contact"
+              className="btn btn-primary w-full sm:w-auto flex items-center justify-center"
               whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <div className="flex justify-between items-center">
-                <div>
-                  <p className="text-2xl font-semibold">$25</p>
-                  <p className="text-gray-600">Per Person</p>
-                </div>
-                <p className="text-[#fe4955] font-medium">
-                  Limited Spots Available
-                </p>
-              </div>
-              <motion.a
-                href="#contact"
-                className="btn btn-primary w-full flex items-center justify-center"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Calendar size={20} className="mr-2" />
-                Reserve Your Spot
-              </motion.a>
-            </motion.div>
+              <Calendar size={20} className="mr-2" />
+              More Information
+            </motion.a>
           </motion.div>
         </div>
       </div>

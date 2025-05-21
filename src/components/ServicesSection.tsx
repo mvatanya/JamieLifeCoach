@@ -1,6 +1,5 @@
 import React from "react";
 import { Clock, Calendar, CheckCircle } from "lucide-react";
-import { motion } from "framer-motion";
 
 type ServiceProps = {
   title: string;
@@ -22,18 +21,10 @@ const ServiceCard: React.FC<ServiceProps> = ({
   delay,
 }) => {
   return (
-    <motion.div
+    <div
       className={`service-card rounded-2xl ${
         isPopular ? "border-[#FFB5C2] border-2" : ""
       }`}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: Number(delay) * 0.2 }}
-      whileHover={{
-        scale: 1.05,
-        transition: { duration: 0.3 },
-      }}
     >
       {isPopular && (
         <div className="bg-yellowButton text-white px-4 py-1 inline-block mb-4 rounded-lg">
@@ -69,18 +60,14 @@ const ServiceCard: React.FC<ServiceProps> = ({
         </ul>
       )}
 
-      <motion.a
-        href="https://calendly.com"
-        target="_blank"
-        rel="noopener noreferrer"
+      <a
+        href="#contact"
         className="btn btn-primary w-full flex items-center justify-center"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
       >
         <Calendar size={18} className="mr-2" />
         Book Now
-      </motion.a>
-    </motion.div>
+      </a>
+    </div>
   );
 };
 
@@ -103,7 +90,7 @@ const ServicesSection: React.FC = () => {
             title="Discovery Call"
             price="Free"
             duration="15 minutes"
-            description="A short 10-15 minute call to discover if I can help you. If I do not believe I can help I will do my best to provide resources that will help you."
+            description="A short 15-minute call to discover if I can help you. If I do not believe I can help I will do my best to provide resources that will help you."
             features={[
               "No obligation consultation",
               "Determine if we're a good fit",
