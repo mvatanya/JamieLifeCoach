@@ -27,7 +27,7 @@ const ContactSection: React.FC = () => {
     try {
       const result = await emailjs.sendForm(
         "service_bi52c66", // Replace with your EmailJS service ID
-        "Ytemplate_ycwhk6v", // Replace with your EmailJS template ID
+        "template_ycwhk6v", // Replace with your EmailJS template ID
         formRef.current!,
         "2aJ3s-_95H4ZB5oLo" // Replace with your EmailJS public key
       );
